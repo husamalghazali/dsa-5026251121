@@ -1,7 +1,7 @@
 package lw01.unguided;
 
-public class ProjectorRental extends Rental {
-    public ProjectorRental(String id, int days) {
+public class projectorRental extends Rental {
+    public projectorRental(String id, int days) {
         super(id, days);
     }
 

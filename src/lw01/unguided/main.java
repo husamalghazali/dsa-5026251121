@@ -4,9 +4,9 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class Main {
+public class main {
     public static void main(String[] args) {
-        try (Scanner scanner = new Scanner(new File("rentals.txt"))) {
+        try (Scanner scanner = new Scanner(new File("src/lw01/unguided/rentals.txt"))) {
             int n = scanner.nextInt();
             Rental[] rentals = new Rental[n];
             int[] units = new int[n];
@@ -18,13 +18,12 @@ public class Main {
                 units[i] = scanner.nextInt();
 
                 switch (type) {
-                    case "LAPTOP" -> rentals[i] = new LaptopRental(id, days);
-                    case "PROJECTOR" -> rentals[i] = new ProjectorRental(id, days);
+                    case "LAPTOP" -> rentals[i] = new laptopRental(id, days);
+                    case "PROJECTOR" -> rentals[i] = new projectorRental(id, days);
                     default -> throw new IllegalArgumentException("Unknown type: " + type);
                 }
             }
 
-            // Single loop over Rental references: runtime polymorphism
             for (int i = 0; i < n; i++) {
                 Rental r = rentals[i];
                 System.out.println(r.getId() + " | " + r.label() + " | " + r.calculateCharge(units[i]));

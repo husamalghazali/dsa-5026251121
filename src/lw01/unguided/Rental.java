@@ -1,7 +1,7 @@
 
 package lw01.unguided;
 
-public abstract class Rental implements Chargeable {
+public abstract class Rental implements chargeable {
     private final String id;
     private final int days;
 
