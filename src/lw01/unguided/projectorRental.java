@@ -1,4 +1,4 @@
-package lw01.unguided;
+
 
 public class projectorRental extends Rental {
     public projectorRental(String id, int days) {

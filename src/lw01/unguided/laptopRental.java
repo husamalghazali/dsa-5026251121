@@ -1,4 +1,4 @@
-package lw01.unguided;
+
 
 public class laptopRental extends Rental {
     public laptopRental(String id, int days) {
